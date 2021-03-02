@@ -1,0 +1,39 @@
+{% load static %}
+<div class="menu">
+<nav class="navbar navbar">
+    <img src="{% static 'images/logo.jpg' %}" height="70" width="250">
+
+    <button type="button" class="btn btn-outline-primary" style="border: hidden">Home</button>
+
+    <button type="button" class="btn btn-outline-primary"  style="border: hidden">About Us</button>
+
+    <div class="dropdown">
+      <button class="btn btn-outline-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: hidden">
+        Services
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item">Air Hostess</a>
+        <a class="dropdown-item">FMCG</a>
+        <a class="dropdown-item" href="#">Call Cente</a>
+        <a class="dropdown-item" href="#">A to Z Services</a>
+      </div>
+    </div>
+
+     <button class="btn btn-outline-primary" type="button" style="border: hidden">Careers</button>
+
+{#    <a class="btn btn-outline-primary" style="border: hidden" href="{% url 'more' %}" role="button">Statewise</a>#}
+
+    <a class="btn btn-outline-primary" style="border: hidden" role="button">Events</a>
+
+    <a class="btn btn-outline-primary" style="border: hidden" role="button">Contact Us</a>
+
+
+{#    <a class="btn btn-outline-primary" style="border: hidden" href="{% url 'login' %}" role="button">Login</a>#}
+
+    <form class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="border: none">Search</button>
+    </form>
+
+</nav>
+    </div>

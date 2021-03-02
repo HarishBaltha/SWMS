@@ -1,0 +1,696 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block harish %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SWMS.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+
+  .slider{
+            background: rgba(0,0,100,0.4);
+            overflow: hidden;
+            height: 450px;
+            width: 100%;
+            border-radius: 25px;
+
+
+        }
+
+        .slider figure div{
+            float: left;
+            width: 20%;
+
+        }
+
+        .slider figure img{
+            width: 100%;
+            float: left;
+
+        }
+
+        .slider figure{
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            animation: 10s  harish infinite;
+
+        }
+
+        @keyframes harish {
+            0% {
+                left: 0;
+            }
+            14% {
+                left: 0;
+            }
+            32% {
+                left: -100%;
+            }
+            44% {
+                left: -100%;
+            }
+            56% {
+                left: -200%;
+            }
+            68% {
+                left: -200%;
+            }
+            72% {
+                left: -100%;
+            }
+            84% {
+                left: -100%;
+            }
+            94% {
+                left: 0%;
+            }
+            96% {
+                left: 0%;
+
+            }
+        }
+
+
+  .serv{
+      border: 20px solid orangered;
+      border-radius: 5px;
+      background-color: orangered;
+
+  }
+
+  .marq{
+      border: 5px;
+      background-color: orangered;
+      color: black;
+  }
+
+
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e;
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+
+  .back{
+      background-color: orangered;
+  }
+
+  .body{
+      color: white;
+  }
+
+  .back1{
+      background-color: white;
+  }
+
+  .body1{
+      color: black;
+  }
+
+  .back2{
+      background-color: green;
+  }
+
+  .body2{
+      color: white;
+  }
+  .text-box{
+      width: 600px;
+      position: absolute;
+      top: 1580px;
+      left: 370px;
+      color: white;
+  }
+
+  .vid{
+      color: rgba(0,100,0,0.5);
+  }
+
+  .vid1{
+      font-size: 80px;
+      position: absolute;
+      top: 2250px;
+      left: 630px;
+      color: white;
+  }
+
+  .para{
+
+      position: absolute;
+      top: 2370px;
+      left: 585px;
+      color: white;
+  }
+
+  .locations{
+      background-color: lightgreen;
+      text-align: center;
+      color: white;
+  }
+
+  .locations1{
+      padding-top: 100px;
+  }
+
+  .touch2{
+      box-sizing: border-box;
+      border: 0px;
+      float: left;
+      width: 50%;
+  }
+
+  .touch1{
+      display: flex;
+      height: 300px;
+
+  }
+
+  .footer{
+    height: 200px;
+    position: relative;
+
+}
+
+
+.footer .footer-bottom{
+    background: black;
+    color: white;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+
+}
+
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body>
+<div class="marq">
+    <marquee>Call us at +91 9876543210  +91998928398</marquee>
+</div>
+<div>
+    {% include 'navbar.html' %}
+</div>
+        <div class="slider">
+            <figure>
+                <div class="slide"><img src="{% static 'images/sing1.jpg' %}" style="border-radius: 10px"></div>
+                <div class="slide"><img src="{% static 'images/sing2.jpg' %}" style="border-radius: 10px"></div>
+                <div class="slide"><img src="{% static 'images/sing3.jpg' %}" style="border-radius: 10px"></div>
+            </figure>
+        </div>
+
+
+<div class="services">
+<div id="services" class="container-fluid text-center">
+  <div class="serv">
+    <h1 style="color: black; font-size: 40px">OUR SERVICES</h1>
+  </div>
+  <div class="container-fluid bg-grey">
+      <div class="row">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-globe logo slideanim"></span>
+        </div>
+        <div class="col-sm-8">
+          <div>
+          <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">A TO Z SERVICES</button>
+          <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">AIR HOSTESS</button>
+          <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">BPO</button>
+          <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">CALL CENTER</button>
+          <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">CUSTOMER CARE</button>
+           </div>
+            &nbsp;
+           <div>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">EVENT MANAGEMENT</button>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">FILM PRODUCTIONS</button>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">FINANCIAL ADVISOR</button>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">HR SOURCES</button>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">FMCG</button>
+           </div>
+            &nbsp;
+           <div>
+               <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">OUT SOURCING</button>
+               <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">REAL ESTATES</button>
+               <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">SOCIAL RESPONSIBILITIES</button>
+               <button type="button" style="background-color: orangered; border: hidden; color: white; border-radius: 5px; font-size: 15px">SOFTWARE DISTRIBUTORS</button>
+           </div>
+            &nbsp;
+           <div>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">TOURS & TRAVELS</button>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">TRAINING COURSES(A-Z)</button>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">VISA SERVICES</button>
+               <button type="button" style="background-color: black; border: hidden; color: white; border-radius: 5px; font-size: 15px">WEB DESIGN</button>
+           </div>
+         </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h1 style="color: orangered">Our Focus</h1>
+    <h4 style="color: deepskyblue">We understand your requirements and provide quality service.</h4>
+  </div>
+  <div class="row slideanim">
+
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+          <div class="back">
+          <div>
+            <img src="{% static 'images/visa.jpg' %}" height="190" width="170" style="border-radius: 50%">
+          </div>
+          <h4 style="color: white">CALL CENTER</h4>
+          <div class="body1">
+          <p style="color: white">
+              Sahara World Management Services<br>
+              is a 24/7 inbound call center services<br>
+              company &nbsp; where you will &nbsp; find highly<br>
+              competent &nbsp; people along with innov-<br>
+              ative technology together to provide<br>
+              you &nbsp; the &nbsp; best &nbsp; call &nbsp; center &nbsp; services,<br>
+              Back office services &nbsp; along with data<br>
+              entry &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; services, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; live &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chat.
+          </p>
+          </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+          <div class="back1">
+          <div>
+            <img src="{% static 'images/visa.jpg' %}" height="190" width="170" style="border-radius: 50%">
+          </div>
+          <h4 style="color: black">VISA IMMIGRATION</h4>
+          <div class="body1">
+          <p style="color: black">
+              Sahara World Management Services<br>
+              is a 24/7 inbound call center services<br>
+              company &nbsp; where you will &nbsp; find highly<br>
+              competent &nbsp; people along with innov-<br>
+              ative technology together to provide<br>
+              you &nbsp; the &nbsp; best &nbsp; call &nbsp; center &nbsp; services,<br>
+              Back office services &nbsp; along with data<br>
+              entry &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; services, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; live &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chat.
+          </p>
+          </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+<div class="back2">
+        <div>
+            <img src="{% static 'images/event.jpg' %}" height="190" width="170" style="border-radius: 50%">
+        </div>
+        <h4 style="color: white" >EVENT MANAGEMENT</h4>
+        <div class="body2">
+          <p >
+              Sahara World Management Services<br>
+              is a 24/7 inbound call center services<br>
+              company &nbsp; where you will &nbsp; find highly<br>
+              competent &nbsp; people along with innov-<br>
+              ative technology together to provide<br>
+              you &nbsp; the &nbsp; best &nbsp; call &nbsp; center &nbsp; services,<br>
+              Back office services &nbsp; along with data<br>
+              entry &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; services, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; live &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chat.
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <div class="vid">
+      <img src="{% static 'images/sing2.jpg' %}" width="100%" height="600">
+      <div class="text-box">
+        <h2 style="color: white;">Explore Our Awesome</h2>
+      </div>
+      <div class="vid1">
+          <i class="fa fa-play-circle" aria-hidden="true" ></i>
+      </div>
+      <div class="para">
+           <p>click icon to open video</p>
+      </div>
+  </div>
+</div>
+
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <div class="netw">
+  <h2 style= "color: orangered; font-size: 40px">OUR NETWORK</h2><br>
+  </div>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'images/indian-flag.jpg' %}" alt="Paris" width="400" height="300">
+        <p style="color: deepskyblue"><strong>INDIA</strong></p>
+        <p>Yes, we built in India</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'images/USA-Left.png' %}" alt="New York" width="400" height="300">
+        <p style="color: deepskyblue"><strong>USA</strong></p>
+        <p>We built in USA</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'images/canada.jpg' %}" alt="San Francisco" width="400" height="300">
+        <p style="color: deepskyblue"><strong>CANADA</strong></p>
+        <p>We built in Canada</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'images/australia.jpg' %}" alt="San Francisco" width="400" height="300">
+        <p style="color: deepskyblue"><strong>AUSTRALIA</strong></p>
+        <p>We built in Australia</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'images/UAE.jpg' %}" alt="San Francisco" width="400" height="300">
+        <p style="color: deepskyblue"><strong>UAE</strong></p>
+        <p>We built in UAE</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="{% static 'images/UK.jpg' %}" alt="San Francisco" width="400" height="300">
+        <p style="color: deepskyblue"><strong>UK</strong></p>
+        <p>We built in UK</p>
+      </div>
+    </div>
+  </div><br>
+</div>
+
+<div id="services" class="container-fluid text-center">
+  <h1 style="color: orangered; font-size: 40px">Why Select Us?</h1>
+  <h4 style="color: deepskyblue">We understand ypur requirements and provide quality works</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span style="font-size: 60px; color: orangered"><i class="fa fa-bar-chart" aria-hidden="true"></i></span>
+      <h4>Business Growth</h4>
+      <p>Success scrum project funding marketing<br>
+         seed money prototype innovator direct<br>
+         hackathon android angel investor.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <span style="font-size: 60px; color: orangered"><i class="fa fa-usd" aria-hidden="true"></i></span>
+      <h4>Unlimited Revision</h4>
+      <p>Technology founders churn rate niche<br>
+         market long tail release iteration burn rate<br>
+         backing. Churn rate accelerator.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <span style="font-size: 60px; color: orangered"><i class="fa fa-heart" aria-hidden="true"></i></span>
+      <h4>Ultimate Perfection</h4>
+      <p>Deployment ownership non-disclosure<br>
+         agreement vesting period crowdfunding<br>
+         success influencer partnership.</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span style="font-size: 60px; color: orangered"><i class="fa fa-television" aria-hidden="true"></i></span>
+      <h4>Smart Experience</h4>
+      <p>Success scrum project funding marketing<br>
+         seed money prototype innovator direct<br>
+         hackathon android angel investor.</p>
+    </div>
+    <div class="col-sm-4">
+      <span style="font-size: 60px; color: orangered"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i></span>
+      <h4>strict Deadline</h4>
+      <p>Technology founders churn rate niche<br>
+         market long tail release iteration burn rate<br>
+         backing. Churn rate accelerator.</p>
+    </div>
+    <div class="col-sm-4">
+      <span style="font-size: 60px; color: orangered"><i class="fa fa-star" aria-hidden="true"></i></span>
+      <h4 style="color:#303030;">Reputed Company</h4>
+      <p>Deployment ownership non-disclosure<br>
+         agreement vesting period crowdfunding<br>
+         success influencer partnership.</p>
+    </div>
+  </div>
+</div>
+
+<div id="services" class="locations">
+    <h2>INDIA LOCATIONS</h2>
+    <img src="{% static 'images/indian-flag.jpg' %}" width="400" height="300">
+    <div class="locations1">
+        <span><iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12394.258932248802!2d78.453189!3d17.386991!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1594226061172!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></span>&nbsp;
+        <span><iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12394.258932248802!2d78.453189!3d17.386991!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1594226061172!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></span>&nbsp;
+        <span><iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12394.258932248802!2d78.453189!3d17.386991!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1594226061172!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></span>&nbsp;
+    </div>
+    <div class="locations2">
+ </div>
+</div>
+
+<div id="contact" class="container-fluid">
+  <h2 class="text-center">Get IN Touch</h2>
+   <h3 style="text-align: center; color: black">Allow People to reach you directly through your site:</h3>
+    &nbsp;
+  <div class="touch">
+      <section class="touch1">
+          <section class="touch2" style="background-color: orangered">
+              <h3 style="text-align: center; color: white">Here for you</h3>
+              <p style="text-align: center; color: white">Call us 24/7. We are there for your <br>
+                support<br>
+                  +(425)589-8693,+91 40 48532223</p>
+          </section>
+          <section class="touch2" style="background-color: green">
+              <h3 style="color: white; text-align: center">About Sahara</h3>
+              <p style="color: white; text-align: center">We Make Your Life More Beautiful</p>
+          </section>
+          <section class="touch2" style="background-color: orangered">
+               <h3 style="color: white; text-align: center">Where to find us</h3>
+               <p style="color: white; text-align: center">Head Quarters<br>
+               #330, south<br>
+               Downtown,Seattle,Washington <br>
+                   WA,USA</p>
+          </section>
+          <section class="touch2" style="background-color: green">
+               <h3 style="color: white; text-align: center">Keep in touch</h3>
+          </section>
+      </section>
+  </div>
+</div>
+
+<div class="footer">
+    <div class="footer-bottom">
+        <p style="text-align: center">Sahara World Management Services | All Rights Reserved</p>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<a href="{% url 'click' %}">click here</a>
+</body>
+</html>
+{% endblock %}

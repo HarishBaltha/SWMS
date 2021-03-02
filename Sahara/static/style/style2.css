@@ -1,0 +1,80 @@
+.scroll{
+    border: 3px solid orange;
+    border-radius: 1px;
+    background-color: orange;
+    font-size: 25px;
+    text-align: center;
+    animation: 30s anim infinite;
+}
+@keyframes anim {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.menu-bar{
+    text-align: center;
+}
+
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: green;
+}
+
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 20px;
+}
+
+.menu-bar ul li:hover{
+    background: cadetblue;
+    border-radius: 1px;
+}
+
+.sub-menu{
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+    background: rgb(0, 100, 0);
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.menu-bar ul li:hover .sub-menu ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu ul li{
+    display: block;
+    margin: 10px;
+    border-bottom: 1px dotted #ffffff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu{
+    text-space: 2px;
+}
+
+.img{
+    border: 3px solid white;
+    border-radius: 1px;
+    text-align: center;
+}
+
+.service1{
+    text-align: center;
+}
+
+
